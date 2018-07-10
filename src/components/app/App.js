@@ -13,17 +13,11 @@ class App extends Component {
         <h1 className="App-title">Welcome to React with redux</h1>
       </header>
       <div className="todo-app">
-        <TodoForm currentTodo={this.props.currentTodo}
-        changeCurrent={this.props.changeCurrent}/>
-        <TodoList todos={this.props.todos}/>
+        <TodoForm/>
+        <TodoList/>
       </div>
     </div>);
   }
 }
 
-// export default App;
-
-const mapStateToProps = (state) => state
-
-const ConnectedApp = connect(mapStateToProps)(App)
-export default ConnectedApp
+export default App
