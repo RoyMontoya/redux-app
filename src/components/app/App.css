@@ -7,6 +7,24 @@
   height: 80px;
 }
 
+.todo-app{
+  padding-top: 20px;
+  display: inline-block;
+  text-align: center;
+}
+
+input {
+  font-size: 20px;
+}
+
+ul{
+  padding: 0px;
+}
+
+li{
+  list-style-type: none;
+}
+
 .App-header {
   background-color: #222;
   height: 150px;
