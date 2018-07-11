@@ -1,9 +1,29 @@
 {
   "todos": [
-    {"id": 1, "name": "configure"},
-    {"id": 2, "name": "start server"},
-    {"id": 3, "name": "Load data"},
-    {"id": 4, "name": "Add record"},
-    {"id": 5, "name": "update reducers"}
+    {
+      "id": 1,
+      "name": "configure"
+    },
+    {
+      "id": 2,
+      "name": "start server"
+    },
+    {
+      "id": 3,
+      "name": "Load data"
+    },
+    {
+      "id": 4,
+      "name": "Add record"
+    },
+    {
+      "id": 5,
+      "name": "update reducers"
+    },
+    {
+      "name": "asdf",
+      "isComplete": false,
+      "id": 6
+    }
   ]
 }

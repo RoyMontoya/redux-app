@@ -1,23 +1,26 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
-import {updateCurrent} from '../../reducers/todo'
+import {updateCurrent, saveTodo} from '../../reducers/todo'
 
-const TodoForm = (props) => {
+class TodoForm extends Component {
 
-  const {currentTodo, updateCurrent} = props
+  handleInputChange = (e) => (this.props.updateCurrent(e.target.value))
 
-  const handleInputChange = (e) => (updateCurrent(e.target.value) )
+  handleSubmit = (e) => {
+    e.preventDefault()
+    this.props.saveTodo(this.props.currentTodo)
+  }
 
+  render() {
+    const {currentTodo} = this.props
 
-  return (
-  <form>
-    <input type="text"
-      onChange={handleInputChange}
-      value={currentTodo}/>
-  </form>
-)}
+    return (<form onSubmit={this.handleSubmit}>
+      <input type="text" onChange={this.handleInputChange} value={currentTodo}/>
+    </form>)
+  }
+}
 
 export default connect(
-  (state) => ({currentTodo: state.currentTodo},
-  {updateCurrent })
-)(TodoForm)
+  (state) => ({currentTodo: state.currentTodo})
+    , {updateCurrent, saveTodo})
+    (TodoForm)
