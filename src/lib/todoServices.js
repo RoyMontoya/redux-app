@@ -16,3 +16,15 @@ export const createTodos = (name) => {
   })
   .then(res => res.json())
 }
+
+export const updateTodo = (todo) => {
+  return fetch(`http://localhost:8080/todos/${todo.id}`, {
+    method: 'PUT',
+    headers: {
+      'Accept': 'application/json',
+      'Content-type': 'application/json'
+    },
+    body: JSON.stringify(todo)
+  })
+  .then(res => res.json())
+}

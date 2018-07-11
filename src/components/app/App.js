@@ -4,6 +4,7 @@ import './App.css';
 import TodoForm from '../todo-form/TodoForm'
 import TodoList from '../todo-list/TodoList'
 import {connect} from 'react-redux'
+import Message from '../message/Message'
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <h1 className="App-title">Welcome to React with redux</h1>
       </header>
       <div className="todo-app">
+        <Message/>
         <TodoForm/>
         <TodoList/>
       </div>
