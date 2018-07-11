@@ -10,7 +10,8 @@
     },
     {
       "id": 3,
-      "name": "Load data"
+      "name": "Load data",
+      "isComplete": true
     },
     {
       "id": 4,
